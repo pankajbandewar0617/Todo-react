@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class TodoInput extends Component {
 
-    submitElement = (e) => {
+    getElement = (e) => {
         e.preventDefault()
         const element = e.target.firstChild.value
         if (element) {
@@ -14,8 +14,8 @@ class TodoInput extends Component {
 
     render() {
         return (
-            <form onSubmit={this.submitElement}>
-                <input onSubmit={this.submitElement} type="text"></input>
+            <form onSubmit={this.getElement}>
+                <input type="text"></input>
                 <input type="submit"></input>
             </form>
         );

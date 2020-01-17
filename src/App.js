@@ -27,7 +27,6 @@ class App extends Component {
   }
 
   addElement = (element) => {
-    console.log(element.length)
     const title = { title: element, status: false }
     const todos = [...this.state.todos, title]
     this.setState({ todos })
